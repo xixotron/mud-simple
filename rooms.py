@@ -6,7 +6,7 @@ rooms = {
         "exits": {"fuera": "fuera"},
     },
     "fuera": {
-        "description": "Estás fuera de una casa. Está lloviendo.",
+        "description": "Estas fuera de una casa. Esta lloviendo.",
         "exits": {"dentro": "casa"},
     }
 }
