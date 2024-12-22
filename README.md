@@ -133,13 +133,7 @@ slightly more advanced networking code in `mudserver.py`.
 
 
 ---------------------
-This is a fork of MUD-Pi
-
-MUD Pi was written by Mark Frimston 
-
-For feedback, please email <mfrimston@gmail.com> or add a comment on the 
-project's [Github page](http://github.com/frimkron/mud-pi)
-
+This is a fork of MUD-Pi (Mark Frimston) [Github page](http://github.com/frimkron/mud-pi)
 --------------------
 
 MUD Simple was written by Xixotron and KikoVF
