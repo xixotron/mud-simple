@@ -213,7 +213,7 @@ while True:
                                                           players[id]["room"]))
 
             # 'quit' command
-           elif command == "quit":
+            elif command == "quit":
                mud.disconnect_player(id)
             # the specified exit wasn't found in the current room
             else:
