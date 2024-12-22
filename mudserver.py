@@ -202,8 +202,9 @@ class MudServer(object):
         """
         if clid not in self._clients:
             return
-        client[clid].socket.shutdown(socket.SHUT_RDWR)
-        client[clid].socket.close()
+        client = self._clients[clid]
+        client.socket.shutdown(socket.SHUT_RDWR)
+        client.socket.close()
         
         self._handle_disconnect(clid)
         

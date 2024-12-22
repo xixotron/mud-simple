@@ -212,14 +212,14 @@ while True:
                 mud.send_message(id, "You arrive at '{}'".format(
                                                           players[id]["room"]))
 
-            # 'quit' command
-            elif command == "quit":
-               mud.disconnect_player(id)
             # the specified exit wasn't found in the current room
             else:
                 # send back an 'unknown exit' message
                 mud.send_message(id, "Unknown exit '{}'".format(ex))
 
+        # 'quit' command
+        elif command == "quit":
+            mud.disconnect_player(id)
         # some other, unrecognised command
         else:
             # send back an 'unknown command' message
