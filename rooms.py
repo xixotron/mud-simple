@@ -1,12 +1,12 @@
 #vim: set fileencoding=utf-8
 
 rooms = {
-    "Tavern": {
-        "description": "You're in a tavern warmed by an open fire.",
-        "exits": {"outside": "Outside"},
+    "Casa": {
+        "description": "Estás en una sucia casa.",
+        "exits": {"outside": "Fuera"},
     },
-    "Outside": {
-        "description": "You're standing outside a tavern. It's raining.",
-        "exits": {"inside": "Tavern"},
+    "Fuera": {
+        "description": "Estás fuera de una casa. Está lloviendo.",
+        "exits": {"inside": "Casa"},
     }
 }
