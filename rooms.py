@@ -1,3 +1,5 @@
+#vim: set fileencoding=utf-8
+
 rooms = {
     "Tavern": {
         "description": "You're in a tavern warmed by an open fire.",
