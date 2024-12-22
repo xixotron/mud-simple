@@ -1,14 +1,13 @@
-MUD Pi
+MUD-Simple
 ======
 
-A simple text-based Multi-User Dungeon (MUD) game, which could be run on a 
-Raspberry Pi or other low-end server.
+A simple text-based Multi-User Dungeon (MUD) game.
 
 
 Requirements
 ------------
 
-You will need to install _Python_ (2.7+ or 3.3+) where you wish to run the 
+You will need to install _Python_ (3.3+) where you wish to run the 
 server. Installers for Windows and Mac can be found at 
 <http://www.python.org/download/>. There are also tarballs for Linux, although 
 the best way to install on Linux would be via the package manager.
@@ -110,19 +109,19 @@ more about MUDs.
 Extending the Game
 ------------------
 
-MUD Pi is a free and open source project (that's _free_ as in _freedom_). This 
+MUD-Simple is a free and open source project (that's _free_ as in _freedom_). This 
 means that the source code is included and you are free to read it, copy it, 
 extend it and use it as a starting point for your own MUD game or any other 
 project. See `licence.md` for more info.
 
-MUD Pi was written in the Python programming language. If you have never used
+MUD-Simple was written in the Python programming language. If you have never used
 Python before, or are new to programming in general, why not try an online
 tutorial, such as <http://www.learnpython.org/>.
 
-There are 2 source files in the project. `mudserver.py` is a module containing
+There are 3 source files in the project. `mudserver.py` is a module containing
 the `MudServer` class - a basic server script which handles player connections 
 and sending and receiving messages. `simplemud.py` is an example game using 
-`MudServer`, with player chat and rooms to move between. 
+`MudServer`, with player chat and `rooms.py` are the rooms to move between. 
 
 The best place to start tweaking the game would be to have a look at 
 `simplemud.py`. Why not try adding more rooms to the game world? You'll find
@@ -132,23 +131,18 @@ Of course if you're feeling more adventurous you could take a look at the
 slightly more advanced networking code in `mudserver.py`.
 
 
-MUD-Pi-Based Projects
+
 ---------------------
+This is a fork of MUD-Pi
 
-Here are some of the cool projects people have made from MUD-Pi:
-
-* **[ESP8266 MUD](http://git.savsoul.com/barry/esp8266-Mud) by Barry Ruffner** -
-  a MUD that runs entirely within an ESP8266 microchip, using MicroPython
-* **[MuddySwamp](https://github.com/ufosc/MuddySwamp) by the University of**
-  **Florida Open Source Club** - a UF-themed MUD
-* **[Dumserver](https://github.com/wowpin/dumserver) by Bartek Radwanski** - 
-  a feature-rich MUD engine
-
-
-Author
-------
-
-MUD Pi was written by Mark Frimston
+MUD Pi was written by Mark Frimston 
 
 For feedback, please email <mfrimston@gmail.com> or add a comment on the 
 project's [Github page](http://github.com/frimkron/mud-pi)
+
+--------------------
+
+MUD Simple was written by Xixotron and KikoVF
+For feedback, add a comment on the 
+project's [Github page](http://github.com/xixotron/mud-simple)
+
