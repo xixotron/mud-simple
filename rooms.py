@@ -2,11 +2,11 @@
 
 rooms = {
     "casa": {
-        "descripcion": "Estas en una sucia casa.",
-        "salidas": {"fuera"},
+        "description": "Estas en una sucia casa.",
+        "exits": {"fuera": "fuera"},
     },
     "fuera": {
-        "descripcion": "Estás fuera de una casa. Está lloviendo.",
-        "salidas": {"dentro": "casa"},
+        "description": "Estás fuera de una casa. Está lloviendo.",
+        "exits": {"dentro": "casa"},
     }
 }
