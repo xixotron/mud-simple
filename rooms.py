@@ -7,6 +7,6 @@ rooms = {
     },
     "fuera": {
         "descripcion": "Estás fuera de una casa. Está lloviendo.",
-        "salidas": {"inside": "casa"},
+        "salidas": {"dentro": "casa"},
     }
 }
