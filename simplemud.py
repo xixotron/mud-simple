@@ -61,7 +61,7 @@ while True:
         }
 
         # send the new player a prompt for their name
-        mud.send_message(id, "What is your name?")
+        mud.send_message(id, "Cual es tu nombre?")
 
     # go through any recently disconnected players
     for id in mud.get_disconnected_players():
@@ -75,7 +75,7 @@ while True:
         for pid, pl in players.items():
             # send each player a message to tell them about the diconnected
             # player
-            mud.send_message(pid, "{} quit the game".format(
+            mud.send_message(pid, "{} ha abandonado el juego".format(
                                                         players[id]["name"]))
 
         # remove the player's entry in the player dictionary
@@ -99,13 +99,13 @@ while True:
             # go through all the players in the game
             for pid, pl in players.items():
                 # send each player a message to tell them about the new player
-                mud.send_message(pid, "{} entered the game".format(
+                mud.send_message(pid, "{} ha entrado en el juego".format(
                                                         players[id]["name"]))
 
             # send the new player a welcome message
-            mud.send_message(id, "Welcome to the game, {}. ".format(
+            mud.send_message(id, "Bienvenido al juego, {}. ".format(
                                                            players[id]["name"])
-                             + "Type 'help' for a list of commands. Have fun!")
+                             + "Escribe 'help' para ver la lista de comandos. Diviertete!")
 
             # send the new player the description of their current room
             mud.send_message(id, rooms[players[id]["room"]]["description"])
@@ -154,11 +154,11 @@ while True:
                         playershere.append(players[pid]["name"])
 
             # send player a message containing the list of players in the room
-            mud.send_message(id, "Players here: {}".format(
+            mud.send_message(id, "Jugadores aqui: {}".format(
                                                     ", ".join(playershere)))
 
             # send player a message containing the list of exits from this room
-            mud.send_message(id, "Exits are: {}".format(
+            mud.send_message(id, "Las salidas son: {}".format(
                                                     ", ".join(rm["exits"])))
 
         # 'go' command
@@ -180,7 +180,7 @@ while True:
                             and pid != id:
                         # send them a message telling them that the player
                         # left the room
-                        mud.send_message(pid, "{} left via exit '{}'".format(
+                        mud.send_message(pid, "{} se va '{}'".format(
                                                       players[id]["name"], ex))
 
                 # update the player's current room to the one the exit leads to
@@ -196,17 +196,17 @@ while True:
                         # send them a message telling them that the player
                         # entered the room
                         mud.send_message(pid,
-                                         "{} arrived via exit '{}'".format(
+                                         "{} llega '{}'".format(
                                                       players[id]["name"], ex))
 
                 # send the player a message telling them where they are now
-                mud.send_message(id, "You arrive at '{}'".format(
+                mud.send_message(id, "Llegas a '{}'".format(
                                                           players[id]["room"]))
 
             # the specified exit wasn't found in the current room
             else:
                 # send back an 'unknown exit' message
-                mud.send_message(id, "Unknown exit '{}'".format(ex))
+                mud.send_message(id, "USalida desconocida '{}'".format(ex))
 
         # 'quit' command
         elif command == "quit":
@@ -214,4 +214,4 @@ while True:
         # some other, unrecognised command
         else:
             # send back an 'unknown command' message
-            mud.send_message(id, "Unknown command '{}'".format(command))
+            mud.send_message(id, "Comando desconocido '{}'".format(command))
