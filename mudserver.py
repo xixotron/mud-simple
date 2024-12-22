@@ -200,7 +200,7 @@ class MudServer(object):
     def disconnect_player(self, clid):
         """Disconnect the specified client and close it's socket
         """
-        if clid not in self._clients;
+        if clid not in self._clients:
             return
         client[clid].socket.shutdown(socket.SHUT_RDWR)
         client[clid].socket.close()
