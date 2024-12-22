@@ -133,10 +133,9 @@ while True:
                                  + "surroundings, e.g. 'look'")
             mud.send_message(id, "  go <exit>      - Moves through the exit "
                                  + "specified, e.g. 'go outside'")
-
+            mud.send_message(id, "  quit           - Terminate this game session")
         # 'say' command
         elif command == "say":
-
             # go through every player in the game
             for pid, pl in players.items():
                 # if they're in the same room as the player
@@ -147,7 +146,6 @@ while True:
 
         # 'look' command
         elif command == "look":
-
             # store the player's current room
             rm = rooms[players[id]["room"]]
 
@@ -174,7 +172,6 @@ while True:
 
         # 'go' command
         elif command == "go":
-
             # store the exit name
             ex = params.lower()
 
@@ -215,6 +212,9 @@ while True:
                 mud.send_message(id, "You arrive at '{}'".format(
                                                           players[id]["room"]))
 
+            # 'quit' command
+           elif command == "quit":
+               mud.disconnect_player(id)
             # the specified exit wasn't found in the current room
             else:
                 # send back an 'unknown exit' message
