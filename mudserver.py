@@ -211,12 +211,12 @@ class MudServer(object):
     def _attempt_send(self, clid, data):
         # python 2/3 compatability fix - convert non-unicode string to unicode
         if sys.version < '3' and type(data) != unicode:
-            data = unicode(data, "utf-8")
+            data = unicode(data, "latin1")
         try:
             # look up the client in the client map and use 'sendall' to send
             # the message string on the socket. 'sendall' ensures that all of
             # the data is sent in one go
-            self._clients[clid].socket.sendall(bytearray(data, "utf-8"))
+            self._clients[clid].socket.sendall(bytearray(data, "latin1"))
         # KeyError will be raised if there is no client with the given id in
         # the map
         except KeyError:
@@ -300,7 +300,7 @@ class MudServer(object):
 
             try:
                 # read data from the socket, using a max length of 4096
-                data = cl.socket.recv(4096).decode("utf-8")
+                data = cl.socket.recv(4096).decode("latin1")
 
                 # process the data, stripping out any special Telnet commands
                 message = self._process_sent_data(cl, data)
