@@ -300,7 +300,7 @@ class MudServer(object):
 
             try:
                 # read data from the socket, using a max length of 4096
-                data = cl.socket.recv(4096).decode("latin1")
+                data = cl.socket.recv(4096).decode("utf-8")
 
                 # process the data, stripping out any special Telnet commands
                 message = self._process_sent_data(cl, data)
